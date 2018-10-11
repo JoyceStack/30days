@@ -7,7 +7,17 @@ Vue.use(Router)
 export default new Router({
     routes: [{
         path: '/',
-        name: 'dashboard',
-        component: Dashboard
+        name: '首页',
+        component: Dashboard,
+    }, {
+        path: '/analysis',
+        name: 'analysis',
+        component: () =>
+            import ('@/pages//Analysis'),
+    }, {
+        path: '/helloworld',
+        name: 'helloworld',
+        component: () =>
+            import ('@/pages/HelloWorld'),
     }]
 })

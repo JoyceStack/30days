@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import app from './modules/app'
+import setting from './modules/setting';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
     modules: {
-        app,
+        setting,
     }
 })
 
