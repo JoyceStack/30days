@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>30 days challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <label for="meeting">日期:</label>
+    <input id="meeting" type="date" onchange="datechanged(this.value)" />
+
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>不喝咖啡</td>
+            <td>
+                <input type="radio" name="checkBox1" id="input11" value=""> YES
+                <input type="radio" name="checkBox1" id="input12" value=""> NO
+                <input type="submit" value="确认">
+            </td>
+            <td>
+                完成天数 : <span id="day01">3</span> days
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>不刷微博</td>
+            <td>
+                <input type="radio" name="checkBox2" id="input21" value=""> YES
+                <input type="radio" name="checkBox2" id="input22" value=""> NO
+                <input type="submit" value="确认">
+            </td>
+            <td>
+                完成天数 : <span id="day02">3</span> days
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>学习英语</td>
+            <td>
+                <input type="radio" name="checkBox3" id="input31" value=""> YES
+                <input type="radio" name="checkBox3" id="input32" value=""> NO
+                <input type="submit" value="确认">
+            </td>
+            <td>
+                完成天数 : <span id="day03">3</span> days
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>锻炼半小时</td>
+            <td>
+                <input type="radio" name="checkBox4" id="input41" value=""> YES
+                <input type="radio" name="checkBox4" id="input42" value=""> NO
+                <input type="submit" value="确认"></td>
+            </td>
+            <td>
+                完成天数 : <span id="day04">3</span> days
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>不生郭登鹏的气</td>
+            <td>
+                <input type="radio" name="checkBox5" id="input51" value=""> YES
+                <input type="radio" name="checkBox5" id="input52" value=""> NO
+                <input type="submit" value="确认"></td>
+            </td>
+            <td>
+                完成天数 : <span id="day05">3</span> days
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
