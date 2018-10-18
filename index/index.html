@@ -11,30 +11,34 @@
 </head>
 
 <body>
-    <label for="meeting">日期:</label>
-    <input id="meeting" type="date" onchange="datechanged(this.value)" />
+    <h1 align="center">30 Days Challenge Calendar</h1>
+    <div align="center">
+        <label for="meeting">日期:</label>
+        <input id="meeting" type="date" onchange="datechanged(this.value)" />
+    </div>
     <table class="table table-striped">
         <tbody>
+
             <tr>
                 <td>1</td>
                 <td>不喝咖啡</td>
                 <td>
-                    <input type="radio" name="checkBox1" id="input11" value="">
+                    <input type="radio" name="checkBox01" id="input11" value="">
                     <span class="badge badge-secondary">Yes</span>
-                    <input type="radio" name="checkBox1" id="input12" value="">
+                    <input type="radio" name="checkBox01" id="input12" value="">
                     <span class="badge badge-danger">No</span>
-                    <button id="btn1" type="button" class="btn btn-dark" onclick="btnClick(this.id)">确认</button>
+                    <button id="btn01" type="button" class="btn btn-dark" onclick="btnClick('01')">确认</button>
                 </td>
                 <td>
-                    完成天数 : <span id="day01" class="badge badge-warning">6</span> days
-                    <div id="progress1" class="progress">
-                        <div id="innerprogress01" class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    完成天数 : <span id="day01" class="badge badge-light">0</span> days
+                    <div id="progress01" class="progress">
+                        <div id="innerProgress01" class="progress-bar progress-bar-striped bg-light" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
                     <div id="div1">
-                        <span class="badge badge-pill badge-warning">20181011</span>
+                        <span id="startDay01" class="badge badge-pill badge-light"> </span>
                         <span>~</span>
-                        <span class="badge badge-pill badge-warning">20181016</span>
+                        <span id="endDay01" class="badge badge-pill badge-light"> </span>
                     </div>
                 </td>
             </tr>
@@ -42,22 +46,22 @@
                 <td>2</td>
                 <td>不刷微博</td>
                 <td>
-                    <input type="radio" name="checkBox2" id="input21" value="">
+                    <input type="radio" name="checkBox02" id="input21" value="">
                     <span class="badge badge-secondary">Yes</span>
-                    <input type="radio" name="checkBox2" id="input22" value="">
+                    <input type="radio" name="checkBox02" id="input22" value="">
                     <span class="badge badge-danger">No</span>
-                    <button type="button" class="btn btn-dark">确认</button>
+                    <button id="btn02" type="button" class="btn btn-dark" onclick="btnClick('02')">确认</button>
                 </td>
                 <td>
-                    完成天数 : <span id="day02" class="badge badge-success">9</span> days
-                    <div id="progress2" class="progress">
-                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    完成天数 : <span id="day02" class="badge badge-success">0</span> days
+                    <div id="progress02" class="progress">
+                        <div id="innerProgress02" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
                     <div id="div2">
-                        <span class="badge badge-pill badge-success">20181008</span>
+                        <span id="startDay02" class="badge badge-pill badge-success">20181008</span>
                         <span>~</span>
-                        <span class="badge badge-pill badge-success">20181016</span>
+                        <span id="endDay02" class="badge badge-pill badge-success">20181016</span>
                     </div>
                 </td>
             </tr>
@@ -65,22 +69,22 @@
                 <td>3</td>
                 <td>学习英语</td>
                 <td>
-                    <input type="radio" name="checkBox3" id="input31" value="">
+                    <input type="radio" name="checkBox03" id="input31" value="">
                     <span class="badge badge-secondary">Yes</span>
-                    <input type="radio" name="checkBox3" id="input32" value="">
+                    <input type="radio" name="checkBox03" id="input32" value="">
                     <span class="badge badge-danger">No</span>
-                    <button type="button" class="btn btn-dark">确认</button>
+                    <button id="btn03" type="button" class="btn btn-dark" onclick="btnClick('03')">确认</button>
                 </td>
                 <td>
-                    完成天数 : <span id="day03" class="badge badge-info">3</span> days
-                    <div id="progress3" class="progress">
-                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    完成天数 : <span id="day03" class="badge badge-info">0</span> days
+                    <div id="progress03" class="progress">
+                        <div id="innerProgress03" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 00%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
                     <div id="div3">
-                        <span class="badge badge-pill badge-info">20181013</span>
+                        <span id="startDay03" class="badge badge-pill badge-info">20181013</span>
                         <span>~</span>
-                        <span class="badge badge-pill badge-info">20181015</span>
+                        <span id="endDay03" class="badge badge-pill badge-info">20181015</span>
                     </div>
                 </td>
             </tr>
@@ -88,20 +92,21 @@
                 <td>4</td>
                 <td>锻炼半小时</td>
                 <td>
-                    <input type="radio" name="checkBox4" id="input41" value="">
+                    <input type="radio" name="checkBox04" id="input41" value="">
                     <span class="badge badge-secondary">Yes</span>
-                    <input type="radio" name="checkBox4" id="input42" value="">
+                    <input type="radio" name="checkBox04" id="input42" value="">
                     <span class="badge badge-danger">No</span>
-                    <button type="button" class="btn btn-dark">确认</button>
+                    <button id="btn04" type="button" class="btn btn-dark" onclick="btnClick('04')">确认</button>
                 </td>
                 <td>
                     完成天数 : <span id="day04" class="badge badge-danger">1</span> days
-                    <div id="progress4" class="progress">
-                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 3%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    <div id="progress40" class="progress">
+                        <div id="innerProgress04" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 3%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
                     <div id="div4">
-                        <span class="badge badge-pill badge-danger">20181013</span>
+                        <span id="startDay04" class="badge badge-pill badge-danger">20181013</span>
+                        <span id="endDay04" class="badge badge-pill badge-danger">20181013</span>
                     </div>
                 </td>
             </tr>
@@ -109,20 +114,21 @@
                 <td>5</td>
                 <td>不生郭登鹏的气</td>
                 <td>
-                    <input type="radio" name="checkBox5" id="input51" value="">
+                    <input type="radio" name="checkBox05" id="input51" value="">
                     <span class="badge badge-secondary">Yes</span>
-                    <input type="radio" name="checkBox5" id="input52" value="">
+                    <input type="radio" name="checkBox05" id="input52" value="">
                     <span class="badge badge-danger">No</span>
-                    <button type="button" class="btn btn-dark">确认</button>
+                    <button id="btn05" type="button" class="btn btn-dark" onclick="btnClick('05')">确认</button>
                 </td>
                 <td>
                     完成天数 : <span id="day05" class="badge badge-danger">0</span> days
-                    <div id="progress5" class="progress">
-                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 00%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    <div id="progress05" class="progress">
+                        <div id="innerProgress05" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 00%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
-                    <div id="div5">
-
+                    <div id="div05">
+                        <span id="startDay05" class="badge badge-pill badge-danger">20181013</span>
+                        <span id="endDay05" class="badge badge-pill badge-danger">20181013</span>
                     </div>
                 </td>
             </tr>
