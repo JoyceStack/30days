@@ -1,16 +1,58 @@
+//日期控件选择日期
 function datechanged(value) {
     console.log(value);
 }
 
+//页面初始化
 function initial() {
-    console.log("ok")
+
 }
 
-function submitClick(id) {
-    console.log(`${id} click`)
-}
-
+//点击确认按钮逻辑
 function btnClick(id) {
+    var data = readData();
+}
+
+//读取当前已打卡数据
+function readData() {
+    var recordsString = window.localStorage.records; // string
+    var data = JSON.parse(recordsString);;
+    return data;
+}
+
+//更新数据到界面
+function updateToUI() {
+
+}
+
+//设置日期控件为今天
+function setDateToday() {
+
+}
+
+// 在界面增加打卡数据
+function modifyData() {
+
+}
+
+//写入数据到数据库
+function saveData() {
+    var data = [{ name: 'baochen', age: 12 }, { name: 'baochen', age: 12 }, { name: 'baochen', age: 12 }];
+    var dataString = JSON.stringify(data);
+    window.localStorage.records = dataString;
+}
+
+// initial();
+test();
+
+// TEST:  functions
+function test() {
+    saveData();
+    var data = readData();
+    console.log(data);
+}
+
+function btnClick2(id) {
     var spanDay = document.getElementById("day" + id); // 找到元素
 
     var nextDays = Number(spanDay.innerHTML) + 1;
@@ -51,6 +93,3 @@ function btnClick(id) {
     }
 
 }
-
-
-initial();
