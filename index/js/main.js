@@ -56,6 +56,7 @@ function updateToUI(data) {
         var startDay = data[i].startDay;
         var currentDay = data[i].currentDay;
         var days = data[i].days;
+        //TODO:
     }
 
 }
