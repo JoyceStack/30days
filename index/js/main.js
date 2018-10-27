@@ -52,7 +52,11 @@ function readData() {
 
 //更新数据到界面
 function updateToUI(data) {
-    
+    for (var i = 0; i < data.length; i++) {
+        var startDay = data[i].startDay;
+        var currentDay = data[i].currentDay;
+        var days = data[i].days;
+    }
 
 }
 
@@ -81,7 +85,7 @@ function test() {
     console.log(data);
     data[0].startDay = "1011";
     saveData(data);
-    data = readData();   
+    data = readData();
     data = readData();
     console.log(data);
 }
