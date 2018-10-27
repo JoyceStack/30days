@@ -13,15 +13,46 @@ function btnClick(id) {
     var data = readData();
 }
 
-//读取当前已打卡数据
+//读取当前已打卡数据 
+//NOTE: 1
 function readData() {
-    var recordsString = window.localStorage.records; // string
-    var data = JSON.parse(recordsString);;
-    return data;
+    var recordsString = window.localStorage.records; // string，将localstorge里的数据读出来
+    if (recordsString) {
+        //在数据不为空时,转化为数组返回
+        var data = JSON.parse(recordsString);
+        return data;
+    } else {
+        //数据为空，直接创建一个有默认值数组返回
+        var defaultData = [{
+            startDay: "",
+            currentDay: "",
+            days: 0
+        }, {
+            startDay: "",
+            currentDay: "",
+            days: 0
+        }, {
+            startDay: "",
+            currentDay: "",
+            days: 0
+        }, {
+            startDay: "",
+            currentDay: "",
+            days: 0
+        }, {
+            startDay: "",
+            currentDay: "",
+            days: 0
+        }];
+        return defaultData;
+    }
+
+
 }
 
 //更新数据到界面
-function updateToUI() {
+function updateToUI(data) {
+    
 
 }
 
@@ -36,8 +67,7 @@ function modifyData() {
 }
 
 //写入数据到数据库
-function saveData() {
-    var data = [{ name: 'baochen', age: 12 }, { name: 'baochen', age: 12 }, { name: 'baochen', age: 12 }];
+function saveData(data) {
     var dataString = JSON.stringify(data);
     window.localStorage.records = dataString;
 }
@@ -47,8 +77,12 @@ test();
 
 // TEST:  functions
 function test() {
-    saveData();
     var data = readData();
+    console.log(data);
+    data[0].startDay = "1011";
+    saveData(data);
+    data = readData();   
+    data = readData();
     console.log(data);
 }
 
